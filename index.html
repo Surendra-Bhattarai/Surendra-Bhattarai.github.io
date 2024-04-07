@@ -837,34 +837,14 @@ Journal</b>, 166, 9</i>.  <b><a href="https://iopscience.iop.org/article/10.3847
       </div>
     </section><!-- End Contact Section -->
 
+<!-- For counting the number of visitors-->
+
 <!-- Place this wherever you want to display the counter -->
-<h4><p align='center'>Total visitors: <span id="visitorCount">0</span></p></h4>
+<h4><p align='center'>Total visitors:</p></h4>
 
-<!-- JavaScript to increment the counter -->
-<script>
-    // Function to update visitor count
-    function updateVisitorCount() {
-        // Check if localStorage is supported
-        if (typeof(Storage) !== "undefined") {
-            // Check if visitorCount exists in localStorage
-            if (localStorage.visitorCount) {
-                // If visitorCount exists, increment it by 1
-                localStorage.visitorCount = Number(localStorage.visitorCount) + 1;
-            } else {
-                // If visitorCount doesn't exist, initialize it to 1
-                localStorage.visitorCount = 1;
-            }
-            // Update the visitor count on the page
-            document.getElementById('visitorCount').textContent = localStorage.visitorCount;
-        } else {
-            // If localStorage is not supported, display a message
-            document.getElementById('visitorCount').textContent = "localStorage not supported";
-        }
-    }
-
-    // Call the function to update the visitor count
-    updateVisitorCount();
-</script>
+<!-- hitwebcounter Code START -->
+<p align='center'><a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=12512247&style=0025&nbdigits=5&type=page&initCount=76" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a></p>                          
 		
   </main><!-- End #main -->
 
