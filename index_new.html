@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surendra Bhattarai · Astrophysicist</title>
+  <meta name="description" content="Surendra Bhattarai is a PhD candidate in Astronomy at Yale University who uses stellar oscillations (asteroseismology) to study red giants in open clusters and white dwarfs.">
+  <meta name="keywords" content="Surendra Bhattarai, asteroseismology, white dwarfs, red giants, open clusters, TESS, MESA, Yale Astronomy">
+  <meta name="theme-color" content="#070b16">
+
+  <meta property="og:title" content="Surendra Bhattarai · Astrophysicist">
+  <meta property="og:description" content="Listening to stars: asteroseismology of white dwarfs and open-cluster red giants at Yale.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://surendra-bhattarai.github.io/">
+  <meta property="og:image" content="https://surendra-bhattarai.github.io/assets/img/web/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://surendra-bhattarai.github.io/assets/img/web/profile.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23070b16'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23f4b860'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%238cc8ff' stroke-width='2.5' opacity='.8'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%238cc8ff' stroke-width='1.5' opacity='.4'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="assets/img/web/favicon-256.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/site.css" rel="stylesheet">
+
+  <script>
+    // Apply the saved theme before first paint (no flash).
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Surendra Bhattarai</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#conversations">Conversations</a>
+        <a href="#cv">CV</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+          <i class="bx bx-sun icon-light"></i><i class="bx bx-moon icon-dark"></i>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow rise" style="--d:1">PhD Candidate · Department of Astronomy · Yale University</p>
+        <h1 class="rise" style="--d:2">Surendra Bhattarai <span class="devanagari" lang="hi">सुरेंद्र भट्टराई</span></h1>
+        <p class="lede rise" style="--d:3">I use stellar oscillations, or <em>asteroseismology</em> to study <span class="hl-amber">red giants in open clusters</span> and <span class="hl-blue">white dwarfs</span> to learn how stars live, age, and die.</p>
+        <p class="hero-sub rise" style="--d:4"><a href="https://diabetes.org/about-diabetes/type-1" target="_blank" rel="noopener">Type&nbsp;1 diabetic</a> astrophysicist, and McDougal STEM Career Fellow at Yale.</p>
+        <div class="hero-actions rise" style="--d:5">
+          <a class="btn btn-primary" href="CV_Surendra_Bhattarai.pdf" target="_blank" rel="noopener"><i class="bx bx-file"></i> Download CV</a>
+          <a class="btn" href="https://scholar.google.com/citations?hl=en&user=TDjbK-0AAAAJ" target="_blank" rel="noopener"><i class="bx bxs-graduation"></i> Scholar</a>
+          <a class="btn" href="https://github.com/Surendra-Bhattarai" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+          <a class="btn" href="mailto:surendra.bhattarai@yale.edu"><i class="bx bx-envelope"></i> Email</a>
+        </div>
+      </div>
+
+      <div class="hero-portrait rise" style="--d:2">
+        <div class="pulsar">
+          <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+          <span class="orbit"><span class="planet"></span></span>
+          <img src="assets/img/web/profile-square.jpg" alt="Portrait of Surendra Bhattarai" width="900" height="900">
+        </div>
+      </div>
+    </div>
+
+    <figure class="spectrum container rise" style="--d:7" aria-label="Animated illustration of a red-giant oscillation power spectrum">
+      <canvas id="spectrum"></canvas>
+      <figcaption>
+        <span>power spectrum of a pulsating red giant (illustrative)</span>
+        <span class="spec-axis">frequency →</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <main id="main">
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="kicker"><span>01</span> About</p>
+          <h2 class="reveal">Hello &amp; Namaste!</h2>
+        </div>
+        <div class="about-body reveal">
+          <p>I'm Surendra, a PhD candidate in the <a href="https://astronomy.yale.edu/" target="_blank" rel="noopener">Department of Astronomy</a> at <a href="https://www.yale.edu/" target="_blank" rel="noopener">Yale University</a>, working with <a href="https://campuspress.yale.edu/sarbanibasu/" target="_blank" rel="noopener">Sarbani Basu</a> and <a href="https://earlbellinger.com/" target="_blank" rel="noopener">Earl Bellinger</a>. Stars ring like bells: sound waves and gravity waves travel through their interiors, and the frequencies they ring at tell us what is inside. I use those frequencies to study the cores of dead stars and the ages of star clusters.</p>
+          <p>Before Yale, I completed an integrated BS-MS dual degree in Physics at <a href="https://www.iiserkol.ac.in/" target="_blank" rel="noopener">IISER Kolkata</a>, with my Master's thesis at the <a href="https://iisc.ac.in/" target="_blank" rel="noopener">Indian Institute of Science (IISc), Bangalore</a>.</p>
+          <p>Outside research, I'm learning the flute and guitar, and I'm an active supporter of people living with type&nbsp;1 diabetes.</p>
+
+          <dl class="facts">
+            <div><dt>Based in</dt><dd>New Haven, CT</dd></div>
+            <div><dt>Focus</dt><dd>Asteroseismology · stellar evolution</dd></div>
+            <div><dt>Tools</dt><dd>MESA · GYRE · TESS</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:surendra.bhattarai@yale.edu">surendra.bhattarai@yale.edu</a></dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="container edu reveal">
+        <h3 class="edu-title"><i class="bx bxs-graduation"></i> Education</h3>
+        <ol class="edu-path">
+          <li>
+            <span class="when">2024 – present</span>
+            <h4>PhD, Astronomy &amp; Astrophysics</h4>
+            <p><a href="https://astronomy.yale.edu/" target="_blank" rel="noopener">Yale University</a>, New Haven, CT</p>
+          </li>
+          <li>
+            <span class="when">2023 – 2024</span>
+            <h4>MS thesis</h4>
+            <p><a href="https://iisc.ac.in/" target="_blank" rel="noopener">Indian Institute of Science (IISc)</a>, Bangalore</p>
+          </li>
+          <li>
+            <span class="when">2019 – 2024</span>
+            <h4>BS-MS dual degree, Physics</h4>
+            <p><a href="https://www.iiserkol.ac.in/" target="_blank" rel="noopener">IISER Kolkata</a>, India</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="container stats reveal">
+        <div class="stat"><span class="stat-num" data-count="4">4</span><span class="stat-label">publications</span></div>
+        <div class="stat"><span class="stat-num" data-count="5">5</span><span class="stat-label">h-index</span></div>
+        <div class="stat"><span class="stat-num" data-count="5">5</span><span class="stat-label">courses as TA</span></div>
+        <div class="stat"><span class="stat-num" data-count="1">1</span><span class="stat-label">asteroid discovered</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section class="section" id="research">
+      <div class="container">
+        <p class="kicker"><span>02</span> Research</p>
+        <h2 class="reveal">Two kinds of stars, one technique.</h2>
+        <p class="section-intro reveal">Oscillation frequencies are some of the most precise measurements in astronomy. I combine them with stellar models (<a href="https://docs.mesastar.org/" target="_blank" rel="noopener">MESA</a> and <a href="https://gyre.readthedocs.io/" target="_blank" rel="noopener">GYRE</a>) and space photometry from TESS and Kepler.</p>
+
+        <div class="research-grid">
+          <article class="research-card wd reveal">
+            <div class="rc-visual" aria-hidden="true">
+              <svg viewBox="0 0 200 120"><defs><radialGradient id="wdg"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#cfe6ff"/><stop offset="1" stop-color="#8cc8ff" stop-opacity="0"/></radialGradient></defs>
+                <circle cx="100" cy="60" r="56" fill="url(#wdg)" opacity=".35"/><circle cx="100" cy="60" r="16" fill="#eaf5ff"/>
+                <g fill="#f4b860" opacity=".85"><circle cx="146" cy="38" r="2.2"/><circle cx="156" cy="50" r="1.5"/><circle cx="138" cy="28" r="1.2"/><circle cx="160" cy="34" r="1"/><circle cx="150" cy="62" r="1.1"/></g>
+                <path d="M118 52 Q 135 44 146 38" stroke="#f4b860" stroke-width=".8" fill="none" stroke-dasharray="2 3" opacity=".7"/></svg>
+            </div>
+            <p class="rc-tag">Current · PhD</p>
+            <h3>Polluted white dwarfs</h3>
+            <p>Many white dwarfs carry heavy elements in their atmospheres, debris from rocky planets they are still accreting. With MESA and GYRE models, I study how that pollution reshapes the envelope of pulsating (ZZ&nbsp;Ceti) white dwarfs and shifts their g-mode periods, and whether it can bias the masses and temperatures we infer from asteroseismology.</p>
+            <ul class="chips"><li>ZZ Ceti</li><li>g-modes</li><li>MESA + GYRE</li><li>accretion</li></ul>
+          </article>
+
+          <article class="research-card rg reveal">
+            <div class="rc-visual" aria-hidden="true">
+              <svg viewBox="0 0 200 120"><defs><radialGradient id="rgg"><stop offset="0" stop-color="#ffd59a"/><stop offset=".55" stop-color="#f4b860"/><stop offset="1" stop-color="#f4b860" stop-opacity="0"/></radialGradient></defs>
+                <g fill="#fff" opacity=".55"><circle cx="40" cy="30" r="1.4"/><circle cx="58" cy="78" r="1.1"/><circle cx="160" cy="28" r="1.3"/><circle cx="170" cy="88" r="1"/><circle cx="74" cy="20" r=".9"/><circle cx="132" cy="98" r="1.2"/><circle cx="30" cy="92" r="1"/></g>
+                <circle cx="100" cy="60" r="44" fill="url(#rgg)" opacity=".55"/><circle cx="100" cy="60" r="24" fill="#f6b25a"/>
+                <circle cx="62" cy="48" r="7" fill="#f8c37a" opacity=".85"/><circle cx="142" cy="70" r="9" fill="#f2a64c" opacity=".85"/><circle cx="128" cy="34" r="5" fill="#ffd59a" opacity=".85"/></svg>
+            </div>
+            <p class="rc-tag">Current · PhD</p>
+            <h3>Red giants in open clusters</h3>
+            <p>Stars born together in an open cluster share one age and one chemical makeup, which makes them a controlled experiment. I measure the oscillations of cluster red giants in TESS (and Kepler/K2) light curves to build a homogeneous seismic catalog, pin down cluster ages and helium abundances, and use them for Galactic archaeology.</p>
+            <ul class="chips"><li>TESS</li><li>solar-like oscillations</li><li>cluster ages</li><li>Galactic archaeology</li></ul>
+          </article>
+        </div>
+
+        <div class="previously reveal">
+          <p class="kicker small">Previously</p>
+          <div class="prev-grid">
+            <div class="prev-item"><i class="bx bx-planet"></i><div><h4>Validating TESS exoplanets</h4><p>Statistical validation of super-Earths and sub-Saturns with the VaTEST collaboration.</p></div></div>
+            <div class="prev-item"><i class="bx bx-atom"></i><div><h4>Super-Chandrasekhar white dwarfs</h4><p>MS thesis at IISc: simulating white dwarfs that may exceed the Chandrasekhar limit.</p></div></div>
+            <div class="prev-item"><i class="bx bx-meteor"></i><div><h4>Asteroid 2021 LH10</h4><p>Discovered a main-belt asteroid in the International Asteroid Search Campaign.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PUBLICATIONS ===================== -->
+    <section class="section alt" id="publications">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker"><span>03</span> Publications</p>
+            <h2 class="reveal">Papers</h2>
+          </div>
+          <a class="btn btn-ghost" href="https://scholar.google.com/citations?hl=en&user=TDjbK-0AAAAJ" target="_blank" rel="noopener">h-index 5 · Google Scholar <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+
+        <h3 class="pub-group">Refereed journal articles</h3>
+        <ol class="pubs">
+          <li class="pub reveal">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1017/pasa.2024.29" target="_blank" rel="noopener">VaTEST III: Validation of 8 Potential Super-Earths from TESS Data</a></h4>
+              <p class="venue">Publications of the Astronomical Society of Australia (PASA)</p>
+              <details class="authors">
+                <summary>Mistry, P., Prasad, A., Maity, M., Pathak, K., Gharat, S., Lekkas, G., <b>Bhattarai, S.</b>, et al. <span class="more">show all 32</span></summary>
+                <p>Priyashkumar Mistry, Aniket Prasad, Mousam Maity, Kamlesh Pathak, Sarvesh Gharat, Georgios Lekkas, <b>Surendra Bhattarai</b>, Dhruv Kumar, Jack J Lissauer, Joseph D Twicken, Abderahmane Soubkiou, Francisco J Pozuelos, Jon Jenkins, Keith Horne, Steven Giacalone, Khalid Barkaoui, Mathilde Timmermans, Cristilyn N Watkins, Ramotholo Sefako, Karen A Collins, Avi Shporer, Zouhair Benkhaldoun, Chris Stockdale, Emmanuël Jehin, Felipe Murgas, Martin Paegert, Michael B Lund, Norio Narita, Richard P Schwarz, Robert F Goeke, Thiam-Guan Tan, Yugo Kawai</p>
+              </details>
+              <div class="pub-links"><a href="https://doi.org/10.1017/pasa.2024.29" target="_blank" rel="noopener">DOI</a></div>
+            </div>
+          </li>
+          <li class="pub reveal">
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <h4><a href="https://iopscience.iop.org/article/10.3847/1538-3881/acd548" target="_blank" rel="noopener">VaTEST II: Statistical Validation of 11 TESS-Detected Exoplanets Orbiting K-type Stars</a></h4>
+              <p class="venue">The Astronomical Journal, 166, 9</p>
+              <details class="authors">
+                <summary>Mistry, P., Pathak, K., Prasad, A., Lekkas, G., <b>Bhattarai, S.</b>, et al. <span class="more">show all 51</span></summary>
+                <p>Priyashkumar Mistry, Kamlesh Pathak, Aniket Prasad, Georgios Lekkas, <b>Surendra Bhattarai</b>, Sarvesh Gharat, Mousam Maity, Dhruv Kumar, Karen A. Collins, Richard P. Schwarz, Christopher R. Mann, Elise Furlan, Steve B. Howell, David Ciardi, Allyson Bieryla, Elisabeth C. Matthews, Erica Gonzales, Carl Ziegler, Ian Crossfield, Steven Giacalone, Thiam-Guan Tan, Phil Evans, Krzysztof G. Helminiak, Kevin I. Collins, Norio Narita, Akihiko Fukui, Francisco J. Pozuelos, Courtney Dressing, Abderahmane Soubkiou, Zouhair Benkhaldoun, Joshua E. Schlieder, Olga Suarez, Khalid Barkaoui, Enric Palle, Felipe Murgas, Gregor Srdoc, Maria V. Goliguzova, Ivan A. Strakhov, Crystal Gnilka, Kathryn Lester, Colin Littlefield, Nic Scott, Rachel Matson, Michael Gillon, Emmanuel Jehin, Mathilde Timmermans, Mourad Ghachoui, Lyu Abe, Philippe Bendjoya, Tristan Guillot, Amaury H.M.J. Triaud</p>
+              </details>
+              <div class="pub-links"><a href="https://iopscience.iop.org/article/10.3847/1538-3881/acd548" target="_blank" rel="noopener">DOI</a></div>
+            </div>
+          </li>
+          <li class="pub reveal">
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1093/mnras/stad543" target="_blank" rel="noopener">VaTEST I: Validation of Sub-Saturn Exoplanet TOI-181b in Narrow Orbit from its Host Star</a></h4>
+              <p class="venue">Monthly Notices of the Royal Astronomical Society, 521, 1066–1078</p>
+              <details class="authors">
+                <summary>Mistry, P., Pathak, K., Lekkas, G., Prasad, A., <b>Bhattarai, S.</b>, et al. <span class="more">show all 13</span></summary>
+                <p>Priyashkumar Mistry, Kamlesh Pathak, Georgios Lekkas, Aniket Prasad, <b>Surendra Bhattarai</b>, Mousam Maity, Charles A. Beichman, David R. Ciardi, Phil Evans, Allyson Bieryla, Jason D. Eastman, Gilbert A. Esquerdo, Jennifer P. Lucero</p>
+              </details>
+              <div class="pub-links"><a href="https://doi.org/10.1093/mnras/stad543" target="_blank" rel="noopener">DOI</a></div>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="pub-group">Conference proceedings</h3>
+        <ol class="pubs">
+          <li class="pub reveal">
+            <div class="pub-year">2025</div>
+            <div class="pub-body">
+              <h4><a href="https://arxiv.org/abs/2411.18692" target="_blank" rel="noopener">Simulating super-Chandrasekhar white dwarfs</a></h4>
+              <p class="venue">Astrophysics and Space Science Proceedings, <i>The Relativistic Universe: From Classical to Quantum</i> (Springer Nature)</p>
+              <details class="authors">
+                <summary>Zuraiq, Z., Kumar, A., Hackett, A. J., <b>Bhattarai, S.</b>, Tout, C. A., Mukhopadhyay, B. <span class="more">details</span></summary>
+                <p>Proceedings of the International Symposium on Recent Developments in Relativistic Astrophysics, Gangtok, December 11–13, 2023. Eds. S. Ghosh &amp; A. R. Rao.</p>
+              </details>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2411.18692" target="_blank" rel="noopener">arXiv</a>
+                <a href="https://link.springer.com/book/9783031901850" target="_blank" rel="noopener">Springer</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== HIGHLIGHTS ===================== -->
+    <section class="section" id="highlights">
+      <div class="container">
+        <p class="kicker"><span>04</span> Highlights</p>
+        <h2 class="reveal">Talks, telescopes &amp; outreach.</h2>
+        <p class="section-intro reveal">Some of the talks I've given, the observing I've done with students, and the events I've helped organize.</p>
+        <div class="notes" id="notes"><!-- filled from assets/js/content.js --></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONVERSATIONS ===================== -->
+    <section class="section alt" id="conversations">
+      <div class="container">
+        <div class="convo-head">
+          <div>
+            <p class="kicker"><span>05</span> Career Conversations</p>
+            <h2 class="reveal">Conversations with people who made the leap.</h2>
+          </div>
+          <div class="convo-intro reveal">
+            <p>As a <strong>McDougal STEM Career Fellow</strong> at Yale's <a href="https://ocs.yale.edu/staff-list/#surendra-bhattarai" target="_blank" rel="noopener">Office of Career Strategy</a>, I host conversations with experts in academia, industry, government and beyond, so that graduate students and postdocs heading into the job market can hear how others found their path.</p>
+          </div>
+        </div>
+        <div class="filters" id="convo-filters" role="toolbar" aria-label="Filter conversations by sector"></div>
+        <div class="convos" id="convos"><!-- filled from assets/js/content.js --></div>
+        <div class="convo-cta reveal">
+          <i class="bx bx-microphone"></i>
+          <p>Have a career story that could help students in STEM? I'd love to have you on.</p>
+          <a class="btn btn-primary" href="mailto:surendra.bhattarai@yale.edu?subject=Career%20Conversation">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CV ===================== -->
+    <section class="section" id="cv">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker"><span>06</span> Curriculum Vitae</p>
+            <h2 class="reveal">Teaching &amp; service</h2>
+          </div>
+          <a class="btn btn-ghost" href="CV_Surendra_Bhattarai.pdf" target="_blank" rel="noopener"><i class="bx bx-download"></i> Full CV (PDF)</a>
+        </div>
+
+        <div class="cv-grid">
+          <div class="cv-col reveal">
+            <h3><i class="bx bx-chalkboard"></i> Teaching</h3>
+            <ol class="timeline">
+              <li><span class="when">Fall 2026</span><h4><a href="https://courses.yale.edu/?details&srcdb=202603&crn=10137" target="_blank" rel="noopener">ASTR 2100 · Stars and Their Evolution</a></h4><p>Teaching Assistant, Yale</p></li>
+              <li><span class="when">Fall 2025</span><h4><a href="https://courses.yale.edu/?details&srcdb=202503&crn=10876" target="_blank" rel="noopener">ASTR 1800 · Relativity and Black Holes</a></h4><p>Teaching Assistant, Yale</p></li>
+              <li><span class="when">Spring 2025</span><h4><a href="https://courses.yale.edu/?details&srcdb=202501&crn=20084" target="_blank" rel="noopener">ASTR 220 · Galaxies and Cosmology</a></h4><p>Teaching Assistant, Yale</p></li>
+              <li><span class="when">Fall 2024</span><h4><a href="https://courses.yale.edu/?details&srcdb=202403&crn=11168" target="_blank" rel="noopener">ASTR 155 · Intro to Astronomical Observing</a></h4><p>Teaching Assistant, Yale</p></li>
+              <li><span class="when">Spring 2023</span><h4><a href="https://www.iiserkol.ac.in/teaching-plan/course/2023/Spring/PH3205/" target="_blank" rel="noopener">PH3205 · Computational Physics</a></h4><p>Teaching Assistant, IISER Kolkata</p></li>
+            </ol>
+          </div>
+
+          <div class="cv-col reveal">
+            <h3><i class="bx bx-group"></i> Service &amp; outreach</h3>
+            <ol class="timeline">
+              <li><span class="when">Current</span><h4>McDougal STEM Career Fellow</h4><p><a href="https://ocs.yale.edu/staff-list/#surendra-bhattarai" target="_blank" rel="noopener">Office of Career Strategy</a>, Yale</p></li>
+              <li><span class="when">2025</span><h4>Space Policy Advocate</h4><p>Yale STEM Hill Day, Capitol Hill, DC</p></li>
+              <li><span class="when">2025</span><h4>Observing mentor</h4><p>Yale Summer Program in Astrophysics</p></li>
+              <li><span class="when">2024</span><h4>LOC member &amp; volunteer</h4><p><a href="https://astron-soc.in/asi2024/about" target="_blank" rel="noopener">42nd ASI Meeting</a>, IISc Bangalore</p></li>
+              <li><span class="when">2022</span><h4>Science outreach volunteer</h4><p><a href="http://www.cessi.in/nsss/pub_events.html" target="_blank" rel="noopener">National Space Science Exhibition</a>, Science City, Kolkata</p></li>
+              <li><span class="when">Earlier</span><h4>Subject matter expert, mathematics</h4><p>Chegg.com</p></li>
+            </ol>
+          </div>
+        </div>
+
+        <h3 class="sub-head reveal">Skills</h3>
+        <div class="skills reveal">
+          <div><h4>Languages</h4><ul class="chips"><li>Python</li><li>Fortran</li><li>C</li><li>MATLAB</li><li>Shell</li><li>HTML/CSS</li></ul></div>
+          <div><h4>Stellar modeling</h4><ul class="chips"><li>MESA</li><li>GYRE</li><li>STARS</li><li>HPC clusters</li></ul></div>
+          <div><h4>Python ecosystem</h4><ul class="chips"><li>lightkurve</li><li>astropy</li><li>numpy</li><li>pandas</li><li>matplotlib</li><li>bilby</li><li>pycbc</li><li>triceratops</li><li>marvin</li></ul></div>
+          <div><h4>Other</h4><ul class="chips"><li>LaTeX</li><li>Gnuplot</li><li>Origin</li><li>Astrometrica</li><li>Stellarium</li><li>VizieR</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AWARDS ===================== -->
+    <section class="section alt" id="awards">
+      <div class="container">
+        <p class="kicker"><span>07</span> Honors &amp; Awards</p>
+        <h2 class="reveal">Recognition</h2>
+        <div class="awards">
+          <div class="award reveal"><i class="bx bx-trophy"></i><div><h4>Boris Garfinkel Prize Fellowship in Astronomy</h4><p>Yale University · 2024 · $2,500</p></div></div>
+          <div class="award reveal"><i class="bx bx-meteor"></i><div><h4>Discovery of main-belt asteroid 2021 LH10</h4><p><a href="http://iasc.cosmosearch.org/" target="_blank" rel="noopener">International Asteroid Search Campaign</a> · <a href="https://drive.google.com/file/d/1p9LY26ywzPCByg7jrvdaOMHluGgIk-Wi/view?usp=sharing" target="_blank" rel="noopener">certificate</a></p></div></div>
+          <div class="award reveal"><i class="bx bx-medal"></i><div><h4><a href="https://online-inspire.gov.in/" target="_blank" rel="noopener">INSPIRE-DST Fellowship</a></h4><p>Top 1% of students in India in Higher Secondary · ₹400,000</p></div></div>
+          <div class="award reveal"><i class="bx bx-award"></i><div><h4><a href="https://education.assam.gov.in/portlets/anundoram-borooah-award" target="_blank" rel="noopener">Anundoram Borooah Award</a></h4><p>For excellent scores in Secondary education</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LIFE / GALLERY ===================== -->
+    <section class="section" id="life">
+      <div class="container">
+        <p class="kicker"><span>08</span> Beyond research</p>
+        <h2 class="reveal">Places, people &amp; music.</h2>
+        <p class="section-intro reveal">Campuses I've called home, places I've wandered, and friends who were part of the journey. Click any photo to see it larger.</p>
+        <div class="filters" id="gallery-filters" role="toolbar" aria-label="Filter photos"></div>
+        <div class="gallery" id="gallery"><!-- filled from assets/js/content.js --></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div>
+            <p class="kicker"><span>09</span> Contact</p>
+            <h2>Let's talk stars.</h2>
+            <p>Questions about my research, a collaboration, a career conversation, or just saying hello: I'm happy to hear from you.</p>
+          </div>
+          <div class="contact-list">
+            <div class="contact-row">
+              <i class="bx bx-envelope"></i>
+              <a href="mailto:surendra.bhattarai@yale.edu">surendra.bhattarai@yale.edu</a>
+              <button class="copy-btn" type="button" data-copy="surendra.bhattarai@yale.edu" aria-label="Copy email address"><i class="bx bx-copy"></i><span>Copy</span></button>
+            </div>
+            <div class="contact-row"><i class="bx bx-map"></i><span>Department of Astronomy, Yale University, New Haven, CT, USA</span></div>
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/surendra-bhattarai-729aa519b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/Surendra-Bhattarai" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+              <a href="https://scholar.google.com/citations?hl=en&user=TDjbK-0AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="bx bxs-graduation"></i></a>
+              <a href="https://x.com/astro_bhattarai" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.youtube.com/@surendrabhattarai824" target="_blank" rel="noopener" aria-label="YouTube"><i class="bx bxl-youtube"></i></a>
+              <a href="https://www.instagram.com/_surendra_bhattarai/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.facebook.com/surendrasachin.bhattarai/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.quora.com/profile/Surendra-Bhattarai-12" target="_blank" rel="noopener" aria-label="Quora"><i class="bx bxl-quora"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Surendra Bhattarai · New Haven, CT</p>
+      <p class="footer-counter">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=12512247&style=0025&nbdigits=6&type=page&initCount=0" alt="Visitor counter" loading="lazy" height="16">
+      </p>
+      <a href="#top" class="to-top">Back to top <i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-close" type="button" aria-label="Close"><i class="bx bx-x"></i></button>
+    <button class="lb-prev" type="button" aria-label="Previous photo"><i class="bx bx-chevron-left"></i></button>
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-next" type="button" aria-label="Next photo"><i class="bx bx-chevron-right"></i></button>
+  </div>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
