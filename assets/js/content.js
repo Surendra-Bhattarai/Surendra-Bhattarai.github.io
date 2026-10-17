@@ -168,11 +168,11 @@ window.SITE = {
     // { src: "assets/img/web/east-rock.jpg", tag: "Travel", place: "East Rock Park, New Haven", caption: "A winter visit to East Rock Park, New Haven." },
     { src: "assets/img/web/iucaa-garden.jpg", tag: "Campus life", place: "IUCAA, Pune", caption: "IUCAA's iconic cosmic garden." },
     // { src: "assets/img/web/sikkim-monastery.jpg", tag: "Travel", place: "Khecheopalri, Sikkim", caption: "Khecheopalri Monastery, Sikkim." },
-    { src: "assets/img/web/iisc-main.jpg", tag: "Campus life", place: "IISc Bangalore", caption: "In front of IISc's iconic main building." },
-    { src: "assets/img/web/iucaa-trek1.jpg", tag: "Travel", place: "Andharban, near Pune", caption: "Trekking through the Andharban jungle near Pune." },
+    // { src: "assets/img/web/iisc-main.jpg", tag: "Campus life", place: "IISc Bangalore", caption: "In front of IISc's iconic main building." },
+    // { src: "assets/img/web/iucaa-trek1.jpg", tag: "Travel", place: "Andharban, near Pune", caption: "Trekking through the Andharban jungle near Pune." },
     { src: "assets/img/web/tamil-andal.jpg", tag: "Travel", place: "Srivilliputhur, Tamil Nadu", caption: "Andal Temple, Srivilliputhur, Tamil Nadu." },
     { src: "assets/img/web/iiser-durga-puja.jpg", tag: "Campus life", place: "Kolkata", caption: "Kolkata's Durga Puja, 2022." },
-    { src: "assets/img/web/iucaa-aryabhata.jpg", tag: "Campus life", place: "IUCAA, Pune", caption: "Coffee with Aryabhata at IUCAA, Pune." },
+    // { src: "assets/img/web/iucaa-aryabhata.jpg", tag: "Campus life", place: "IUCAA, Pune", caption: "Coffee with Aryabhata at IUCAA, Pune." },
     { src: "assets/img/web/sikkim-pelling2.jpg", tag: "Travel", place: "Pelling, Sikkim", caption: "IISER friends out trekking and exploring around Pelling." },
     // { src: "assets/img/web/iisc-tata.jpg", tag: "Campus life", place: "IISc Bangalore", caption: "Statue of Jamsetji Nusserwanji Tata at IISc Bangalore." },
     { src: "assets/img/web/iiser-badminton.jpg", tag: "Campus life", place: "IISER Kolkata", caption: "Team photo after winning a badminton match at IISER Kolkata." },
@@ -183,8 +183,8 @@ window.SITE = {
     // { src: "assets/img/web/sikkim-lake.jpg", tag: "Travel", place: "Khecheopalri Lake, Sikkim", caption: "Khecheopalri Lake, Sikkim." },
     { src: "assets/img/web/iiser-hostel.jpg", tag: "Campus life", place: "IISER Kolkata", caption: "A regular birthday party at the hostel." },
     // { src: "assets/img/web/iucaa-main.jpg", tag: "Campus life", place: "IUCAA, Pune", caption: "In front of IUCAA's main building." },
-    { src: "assets/img/web/tamil-andal2.jpg", tag: "Travel", place: "Srivilliputhur, Tamil Nadu", caption: "Andal Temple, Srivilliputhur." },
-    { src: "assets/img/web/iiser-gate.jpg", tag: "Campus life", place: "IISER Kolkata", caption: "IISER Kolkata's main gate." },
+    // { src: "assets/img/web/tamil-andal2.jpg", tag: "Travel", place: "Srivilliputhur, Tamil Nadu", caption: "Andal Temple, Srivilliputhur." },
+    // { src: "assets/img/web/iiser-gate.jpg", tag: "Campus life", place: "IISER Kolkata", caption: "IISER Kolkata's main gate." },
     { src: "assets/img/web/iiser-birthday.jpg", tag: "Campus life", place: "IISER Kolkata", caption: "Late-night birthday celebrations at IISER Kolkata." }
   ]
 };
