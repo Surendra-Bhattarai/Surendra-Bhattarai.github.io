@@ -112,45 +112,55 @@ window.SITE = {
   ],
 
   /* ------------------------------------------------------------------------
-     CAREER CONVERSATIONS — podcasts / interviews as McDougal STEM Career Fellow.
-     sector: Academia | Industry | Government | Nonprofit | Entrepreneurship
-     image:  the Zoom screenshot, e.g. "assets/img/conversations/jane-doe.jpg"
-             (leave "" to show a styled placeholder with the guest's initials)
-     link:   recording / episode URL (leave "" if not public)
-     The three entries below are TEMPLATES — replace them with real guests.
+     CAREER CONVERSATIONS — events / podcasts as McDougal STEM Career Fellow.
+     series:  small label above the title (optional)
+     title:   the event title
+     sector:  Academia | Industry | Government | Nonprofit | Entrepreneurship
+              (filter buttons appear once there are 2+ different sectors)
+     image:   the Zoom screenshot, e.g. "assets/img/conversations/my-event.jpg"
+              (leave "" to show a styled placeholder)
+     guests:  [{ name, role }, ...]
+     summary: two or three sentences shown on the card
+     bios:    optional; shown under "About the speakers" when clicked
+     link:    recording URL (leave "" if not public)
      ------------------------------------------------------------------------ */
   conversations: [
     {
-      guest: "Guest Name",
-      role: "Data Scientist",
-      org: "Company",
-      sector: "Industry",
-      date: "2026",
-      image: "",
-      summary: "One or two sentences on what you talked about: how they moved from a PhD into industry, what hiring managers look for, and advice for students starting the search.",
-      topics: ["PhD to industry", "Interviews"],
-      link: ""
-    },
-    {
-      guest: "Guest Name",
-      role: "Assistant Professor",
-      org: "University",
+      series: "Academic Job Search Series · Part 1",
+      title: "Inside Faculty Hiring: Insights from STEM Search Committees",
       sector: "Academia",
       date: "2026",
-      image: "",
-      summary: "One or two sentences on the conversation: the postdoc years, applying for faculty jobs, and building a research group.",
-      topics: ["Faculty job market", "Postdocs"],
+      audience: "For PhD students & postdocs",
+      image: "assets/img/conversations/academic-job-search-1.jpg",
+      guests: [
+        { name: "Prof. Sarah Demers", role: "Chair, Department of Physics, Yale University" },
+        { name: "Prof. Valerie Reinke", role: "Professor of Genetics, Yale School of Medicine" }
+      ],
+      summary: "The academic job market is as competitive as ever, and hiring priorities have shifted. Two senior Yale faculty who lead and serve on search committees shared how the market has changed, what committees actually look for, how application materials are read, and how to position yourself for an academic career.",
+      topics: ["Faculty hiring", "Search committees", "Application materials"],
+      bios: [
+        "<b>Sarah Demers</b> is Chair of the Physics Department at Yale, an experimental particle physicist on the ATLAS experiment at CERN's Large Hadron Collider and the Mu2e experiment at Fermilab. She received her AB from Harvard and PhD from the University of Rochester, was a postdoc with SLAC based at CERN, and joined Yale in 2009. She holds a DOE Early Career Award and co-authored the book <i>Physics and Dance</i>.",
+        "<b>Valerie Reinke</b> is a Professor in the Department of Genetics at Yale School of Medicine, where her lab studies gene regulatory mechanisms in the germ line using genome-wide approaches. She earned her BS in Genetics from the University of Illinois and her PhD from the University of Texas Health Science Center, and was a postdoc at Stanford before joining Yale in 2000."
+      ],
       link: ""
     },
     {
-      guest: "Guest Name",
-      role: "Program Scientist",
-      org: "Agency / Lab",
-      sector: "Government",
-      date: "2025",
-      image: "",
-      summary: "One or two sentences on the conversation: working at a national lab or agency, and how scientists shape policy and missions.",
-      topics: ["Science policy", "National labs"],
+      series: "Academic Job Search Series · Part 2",
+      title: "Acing the Job Talk: How to Prepare for STEM Academic Interviews",
+      sector: "Academia",
+      date: "2026",
+      audience: "For PhD students & postdocs",
+      image: "assets/img/conversations/academic-job-search-2.jpg",
+      guests: [
+        { name: "Prof. Colin Burke", role: "Assistant Professor of Physics, University of North Texas" },
+        { name: "Prof. Abhishek Moitra", role: "Assistant Professor, Washington State University" }
+      ],
+      summary: "The academic interview is where offers are won or lost. Two faculty who recently went through the job market gave candid advice on every stage, from the first screening call to the campus visit, job talk and chalk talk, and on presenting your research to different audiences and handling tough questions.",
+      topics: ["Job talk", "Chalk talk", "Campus visits"],
+      bios: [
+        "<b>Colin Burke</b> is an Assistant Professor of Physics at the University of North Texas, studying supermassive black hole formation, intermediate-mass black holes and active galactic nuclei. He completed his PhD at the University of Illinois Urbana-Champaign in 2023 and was an NSF Astronomy &amp; Astrophysics Postdoctoral Fellow at Yale. His research has appeared in <i>Science</i> and <i>Nature Astronomy</i>.",
+        "<b>Abhishek Moitra</b> is an Assistant Professor at Washington State University, working on large language model optimization, neuromorphic computing and hardware-algorithm co-design. He completed his PhD at Yale in 2025, and his work has received the IEEE Transactions on CAD Donald O. Pederson Best Paper Award and a Bell Labs Outstanding Innovation Award."
+      ],
       link: ""
     }
   ],
