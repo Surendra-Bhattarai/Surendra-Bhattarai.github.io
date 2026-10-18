@@ -171,7 +171,7 @@ button { font: inherit; color: inherit; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme]) .icon-light { display: inline; } }
 @media (prefers-color-scheme: light) { :root:not([data-theme]) .icon-dark { display: inline; } }
 
-@media (max-width: 1060px) {
+@media (max-width: 1180px) {
   .menu-btn { display: grid; }
   .nav-actions { margin-left: auto; }
   .nav-links {
