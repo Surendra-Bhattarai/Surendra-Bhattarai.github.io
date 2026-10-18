@@ -1,22 +1,25 @@
 /* ==========================================================================
    Surendra Bhattarai — site styles
    Palette idea: amber = red giants, ice blue = white dwarfs, on a night sky.
+   Light theme: cool "observatory paper" with indigo + deep-cyan accents.
    ========================================================================== */
 
 :root {
-  --bg: #f7f5ef;
-  --bg-alt: #efece3;
+  --bg: #f3f5f9;
+  --bg-alt: #e7ecf4;
   --surface: #ffffff;
-  --surface-2: #f3f1ea;
-  --border: rgba(18, 26, 46, 0.11);
-  --border-strong: rgba(18, 26, 46, 0.2);
-  --text: #121a2e;
-  --muted: #586179;
-  --amber: #b5650d;
-  --amber-soft: rgba(181, 101, 13, 0.1);
-  --blue: #2563a8;
-  --blue-soft: rgba(37, 99, 168, 0.09);
-  --shadow: 0 1px 2px rgba(18, 26, 46, 0.04), 0 12px 32px -12px rgba(18, 26, 46, 0.14);
+  --surface-2: #edf1f7;
+  --border: rgba(15, 30, 60, 0.10);
+  --border-strong: rgba(15, 30, 60, 0.20);
+  --text: #0d1a2f;
+  --muted: #4a5770;
+  --amber: #3d3fb8;          /* main accent (indigo) */
+  --amber-soft: rgba(61, 63, 184, 0.09);
+  --blue: #0b6b8a;           /* links / second accent (deep cyan) */
+  --blue-soft: rgba(11, 107, 138, 0.09);
+  --giant: #b5294a;          /* red-giant card title in light mode */
+  --on-accent: #ffffff;
+  --shadow: 0 1px 2px rgba(15, 30, 60, 0.05), 0 14px 34px -14px rgba(15, 30, 60, 0.18);
 
   /* hero is always night-sky */
   --night: #070b16;
@@ -30,7 +33,7 @@
 
   --radius: 18px;
   --radius-sm: 10px;
-  --maxw: 1140px;
+  --maxw: 76rem;
   --gutter: clamp(16px, 4vw, 32px);
   color-scheme: light;
 }
@@ -48,6 +51,8 @@
   --amber-soft: rgba(244, 184, 96, 0.12);
   --blue: #8cc8ff;
   --blue-soft: rgba(140, 200, 255, 0.1);
+  --giant: #f4b860;
+  --on-accent: #1a1205;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 18px 40px -18px rgba(0, 0, 0, 0.6);
   color-scheme: dark;
 }
@@ -65,6 +70,8 @@
     --amber-soft: rgba(244, 184, 96, 0.12);
     --blue: #8cc8ff;
     --blue-soft: rgba(140, 200, 255, 0.1);
+    --giant: #f4b860;
+    --on-accent: #1a1205;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 18px 40px -18px rgba(0, 0, 0, 0.6);
     color-scheme: dark;
   }
@@ -72,13 +79,17 @@
 
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; }
+html {
+  scroll-behavior: smooth; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%;
+  /* 16px up to ~1300px wide, then grows to 20px on very wide screens */
+  font-size: clamp(16px, 0.5vw + 9.5px, 20px);
+}
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -107,7 +118,7 @@ button { font: inherit; color: inherit; }
 }
 .btn i { font-size: 1.15em; }
 .btn:hover { text-decoration: none; transform: translateY(-2px); border-color: var(--amber); }
-.btn-primary { background: var(--amber); border-color: var(--amber); color: #1a1205; }
+.btn-primary { background: var(--amber); border-color: var(--amber); color: var(--on-accent); }
 .btn-primary:hover { filter: brightness(1.06); }
 .btn-ghost { border-color: var(--border); background: var(--surface); }
 
@@ -246,19 +257,20 @@ button { font: inherit; color: inherit; }
 .section.alt { background: var(--bg-alt); }
 .section h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); font-weight: 450; max-width: 18em; }
 .kicker {
-  display: flex; align-items: center; gap: 10px;
-  font-family: var(--mono); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--amber);
-  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--mono); font-size: 1rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--amber);
+  margin-bottom: 16px;
 }
 .kicker span { color: var(--muted); }
-.kicker::after { content: ""; width: 40px; height: 1px; background: var(--amber); opacity: .6; }
-.kicker.small { font-size: .7rem; }
+.kicker::after { content: ""; width: 64px; height: 1px; background: var(--amber); opacity: .6; }
+.kicker.small { font-size: .85rem; }
 .section-intro { color: var(--muted); font-size: 1.08rem; max-width: 42em; margin: 18px 0 0; }
 .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
 .sub-head { font-size: 1.5rem; margin: 64px 0 22px; }
 
 /* ---------- about ---------- */
-.about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: start; }
+.about-side .facts { grid-template-columns: 1fr; margin-top: 32px; }
 .about-body p { font-size: 1.08rem; }
 .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin: 28px 0 0; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 .facts div { background: var(--surface); padding: 14px 18px; }
@@ -298,13 +310,13 @@ button { font: inherit; color: inherit; }
 }
 .research-card:hover { transform: translateY(-4px); }
 .research-card.wd:hover { border-color: var(--blue); }
-.research-card.rg:hover { border-color: var(--amber); }
+.research-card.rg:hover { border-color: var(--giant); }
 .rc-visual { height: 150px; margin: -28px -28px 22px; background: linear-gradient(180deg, var(--night), var(--night-2)); display: grid; place-items: center; }
 .rc-visual svg { height: 100%; width: auto; }
 .rc-tag { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
 .research-card h3 { font-size: 1.7rem; margin-bottom: 12px; }
 .research-card.wd h3 { color: var(--blue); }
-.research-card.rg h3 { color: var(--amber); }
+.research-card.rg h3 { color: var(--giant); }
 .research-card p { color: var(--muted); }
 .previously { margin-top: 48px; }
 .prev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -410,7 +422,7 @@ button { font: inherit; color: inherit; }
 /* ---------- conversations ---------- */
 .convo-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; }
 .convo-intro p { color: var(--muted); font-size: 1.04rem; margin: 0; }
-.convos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 22px; }
+.convos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px; }
 .convo {
   display: flex; flex-direction: column;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
@@ -439,7 +451,22 @@ button { font: inherit; color: inherit; }
 .sector { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); }
 .sector.s-industry, .sector.s-entrepreneurship { background: var(--amber-soft); color: var(--amber); }
 .convo-date { font-family: var(--mono); font-size: .74rem; color: var(--muted); }
-.convo h3 { font-size: 1.35rem; margin-top: 8px; }
+.convo h3 { font-size: 1.45rem; margin-top: 2px; }
+button.convo-thumb { border: 0; padding: 0; width: 100%; cursor: zoom-in; }
+.convo-thumb .zoom {
+  position: absolute; right: 12px; bottom: 12px; width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center; background: rgba(7, 11, 22, .6); color: #fff; backdrop-filter: blur(6px);
+}
+.convo-series { font-family: var(--mono); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--amber); margin: 10px 0 0; }
+.convo-audience { color: var(--muted); font-size: .86rem; margin: 2px 0 0; }
+.convo-guests { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+.convo-guests li { display: flex; flex-direction: column; padding-left: 12px; border-left: 2px solid var(--amber); }
+.convo-guests strong { font-size: .96rem; }
+.convo-guests span { color: var(--muted); font-size: .86rem; }
+.convo-bios { margin-top: 14px; font-size: .9rem; color: var(--muted); }
+.convo-bios summary { cursor: pointer; color: var(--blue); font-weight: 600; }
+.convo-bios p { margin: 10px 0 0; }
+.convo-bios b { color: var(--text); }
 .convo-role { color: var(--text); font-size: .92rem; font-weight: 600; margin: 0; }
 .convo-summary { color: var(--muted); font-size: .93rem; margin: 8px 0 0; }
 .convo .chips { margin-top: auto; padding-top: 14px; }

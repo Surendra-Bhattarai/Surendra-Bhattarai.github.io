@@ -164,23 +164,39 @@
     if (!convos.length) {
       convosEl.innerHTML = '<p class="empty">Episodes coming soon.</p>';
     } else {
-      convosEl.innerHTML = convos.map(function (c) {
+      convosEl.innerHTML = convos.map(function (c, ci) {
+        // Older entries used a single guest/role/org; newer ones list guests.
+        var guests = c.guests || (c.guest ? [{ name: c.guest, role: [c.role, c.org].filter(Boolean).join(' · ') }] : []);
+        var title = c.title || (guests[0] && guests[0].name) || '';
         var media = c.image
-          ? '<img src="' + esc(c.image) + '" alt="Zoom conversation with ' + esc(c.guest) + '" loading="lazy">'
-          : '<div class="placeholder"><span class="initials">' + esc(initials(c.guest)) + '</span>' + WAVE + '</div>';
+          ? '<img src="' + esc(c.image) + '" alt="Zoom screenshot: ' + esc(title) + '" loading="lazy">'
+          : '<div class="placeholder"><span class="initials">' + esc(initials(guests[0] ? guests[0].name.replace(/^(Prof|Dr)\.?\s+/, '') : title)) + '</span>' + WAVE + '</div>';
         var thumb = c.link
           ? '<a class="convo-thumb" href="' + esc(c.link) + '" target="_blank" rel="noopener">' + media + '<span class="play"><i class="bx bx-play"></i> Watch</span></a>'
-          : '<div class="convo-thumb">' + media + '</div>';
+          : (c.image ? '<button type="button" class="convo-thumb" data-ci="' + ci + '" aria-label="Enlarge screenshot">' + media + '<span class="zoom"><i class="bx bx-expand-alt"></i></span></button>'
+                     : '<div class="convo-thumb">' + media + '</div>');
+        var guestHtml = guests.length ? '<ul class="convo-guests">' + guests.map(function (g) {
+          return '<li><strong>' + esc(g.name) + '</strong>' + (g.role ? '<span>' + esc(g.role) + '</span>' : '') + '</li>';
+        }).join('') + '</ul>' : '';
         var topics = (c.topics || []).length ? '<ul class="chips">' + c.topics.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' : '';
+        // bios are written by you in content.js, so simple <b>/<i> tags are allowed there
+        var bios = (c.bios || []).length ? '<details class="convo-bios"><summary>About the speakers</summary>' + c.bios.map(function (b) { return '<p>' + b + '</p>'; }).join('') + '</details>' : '';
         return '<article class="convo reveal" data-sector="' + esc(c.sector) + '">' + thumb +
           '<div class="convo-body">' +
             '<div class="convo-top"><span class="sector s-' + slug(c.sector) + '">' + esc(c.sector) + '</span><span class="convo-date">' + esc(c.date) + '</span></div>' +
-            '<h3>' + esc(c.guest) + '</h3>' +
-            '<p class="convo-role">' + esc(c.role) + (c.org ? ' · ' + esc(c.org) : '') + '</p>' +
+            (c.series ? '<p class="convo-series">' + esc(c.series) + '</p>' : '') +
+            '<h3>' + esc(title) + '</h3>' +
+            (c.audience ? '<p class="convo-audience">' + esc(c.audience) + '</p>' : '') +
+            guestHtml +
             '<p class="convo-summary">' + esc(c.summary) + '</p>' +
-            topics +
+            topics + bios +
           '</div></article>';
       }).join('');
+      convosEl.addEventListener('click', function (e) {
+        var b = e.target.closest('button.convo-thumb'); if (!b) return;
+        var c = convos[+b.getAttribute('data-ci')];
+        openLightbox([{ src: c.image, caption: (c.series ? c.series + ': ' : '') + (c.title || '') }], 0);
+      });
       buildFilters($('#convo-filters'), convos, 'sector', function (f) {
         convosEl.querySelectorAll('.convo').forEach(function (el) {
           el.hidden = !(f === '*' || el.getAttribute('data-sector') === f);
