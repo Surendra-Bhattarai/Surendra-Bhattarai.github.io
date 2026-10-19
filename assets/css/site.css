@@ -205,16 +205,13 @@ button { font: inherit; color: inherit; }
   display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
 }
 @media (min-width: 861px) { .eyebrow { flex-wrap: nowrap; white-space: nowrap; } }
-/* "Yale University" set like the Yale wordmark: Yale Blue serif on white */
+/* "Yale University" in a Yale-style serif and Yale's light web blue (#00356B is too dark on the night sky) */
 .hero .yale-mark {
-  display: inline-block; padding: 3px 12px 4px; border-radius: 6px;
-  background: #fff; color: #00356b;
-  font-family: "EB Garamond", "Times New Roman", serif; font-weight: 600; font-size: 1.35em;
-  letter-spacing: 0; text-transform: none; line-height: 1.15;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, .25), 0 6px 20px -8px rgba(0, 53, 107, .6);
-  transition: transform .2s ease;
+  color: #63aaff;
+  font-family: "EB Garamond", "Times New Roman", serif; font-weight: 600; font-size: 1.5em;
+  letter-spacing: 0; text-transform: none; line-height: 1;
 }
-.hero .yale-mark:hover { text-decoration: none; transform: translateY(-1px); }
+.hero .yale-mark:hover { color: #8cc2ff; text-decoration: none; }
 .hero h1 { font-size: clamp(2.6rem, 6.4vw, 5rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.02; }
 .devanagari {
   display: block; margin-top: 10px;
