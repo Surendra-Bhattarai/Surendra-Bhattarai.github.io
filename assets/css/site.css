@@ -200,18 +200,20 @@ button { font: inherit; color: inherit; }
 .starfield { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
 .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 48px; align-items: center; }
 .eyebrow {
-  font-family: var(--mono); font-size: 1rem; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--star-amber); margin-bottom: 18px;
-  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
+  font-family: var(--mono); font-size: 1rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
+  color: #4da8ff;   /* one electric blue for the whole line */
+  text-shadow: 0 0 16px rgba(77, 168, 255, .45);
+  margin-bottom: 18px;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
 }
 @media (min-width: 861px) { .eyebrow { flex-wrap: nowrap; white-space: nowrap; } }
-/* "Yale University" in a Yale-style serif and Yale's light web blue (#00356B is too dark on the night sky) */
+/* "Yale University" keeps the same colour, only the font changes to a Yale-style serif */
 .hero .yale-mark {
-  color: #63aaff;
-  font-family: "EB Garamond", "Times New Roman", serif; font-weight: 600; font-size: 1.5em;
+  color: inherit;
+  font-family: "EB Garamond", "Times New Roman", serif; font-weight: 600; font-size: 1.45em;
   letter-spacing: 0; text-transform: none; line-height: 1;
 }
-.hero .yale-mark:hover { color: #8cc2ff; text-decoration: none; }
+.hero .yale-mark:hover { color: #ffffff; text-decoration: none; }
 .hero h1 { font-size: clamp(2.6rem, 6.4vw, 5rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.02; }
 .devanagari {
   display: block; margin-top: 10px;
