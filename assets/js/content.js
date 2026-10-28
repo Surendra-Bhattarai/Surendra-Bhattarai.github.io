@@ -126,6 +126,25 @@ window.SITE = {
      ------------------------------------------------------------------------ */
   conversations: [
     {
+      series: "PhD Pathways Series · Part 2",
+      title: "AI, Data Science, and Computational Careers for Researchers",
+      sector: "Industry",
+      date: "Oct 2026",
+      audience: "For PhD students & postdocs in the physical sciences and engineering",
+      image: "assets/img/conversations/phd-pathways-2.jpg",
+      guests: [
+        { name: "Emma Castiglia", role: "Data Scientist, Agentio · PhD Physics, Yale" },
+        { name: "Yeshwanth Venkatesha", role: "Software Engineer, Google (YouTube) · PhD Electrical Engineering, Yale" }
+      ],
+      summary: "Many PhDs move from research into data science, machine learning and AI, often without a formal computer science background. Two Yale PhD alumni who made that move, one to an AI startup and one to big tech, talked about building the technical skills these roles need, navigating the transition out of academia, and what their day-to-day work actually looks like.",
+      topics: ["Data science", "Machine learning and AI", "PhD to industry"],
+      bios: [
+        "<b>Emma Castiglia</b> is a Data Scientist at Agentio, an AI-native startup building the buying platform for creator media. She earned her PhD in Physics at Yale in 2022, working in particle physics on the ATLAS experiment at CERN. She was previously a Research Data Scientist at Meta, on the privacy infrastructure, wearables system health and Instagram cross-Meta experiences teams, and did an ML research internship at Netflix during her PhD.",
+        "<b>Yeshwanth Venkatesha</b> is a Software Engineer at Google, working on Community Intelligence at YouTube and using AI to scale connections across the platform. He earned his PhD in Electrical Engineering at Yale in 2025, focusing on efficient machine learning, and completed two Applied Scientist internships at Amazon."
+      ],
+      link: ""
+    },
+    {
       series: "Academic Job Search Series · Part 1",
       title: "Inside Faculty Hiring: Insights from STEM Search Committees",
       sector: "Academia",
