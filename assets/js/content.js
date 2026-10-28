@@ -148,7 +148,7 @@ window.SITE = {
       series: "Academic Job Search Series · Part 1",
       title: "Inside Faculty Hiring: Insights from STEM Search Committees",
       sector: "Academia",
-      date: "2026",
+      date: "Sep 2026",
       audience: "For PhD students & postdocs",
       image: "assets/img/conversations/academic-job-search-1.jpg",
       guests: [
@@ -167,7 +167,7 @@ window.SITE = {
       series: "Academic Job Search Series · Part 2",
       title: "Acing the Job Talk: How to Prepare for STEM Academic Interviews",
       sector: "Academia",
-      date: "2026",
+      date: "Oct 2026",
       audience: "For PhD students & postdocs",
       image: "assets/img/conversations/academic-job-search-2.jpg",
       guests: [
