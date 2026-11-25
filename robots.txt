@@ -1,0 +1,35 @@
+# Keep the personal "Beyond research" photos out of Google Images, so search
+# results show the portrait (assets/img/web/profile*.jpg) instead.
+# The photos still appear on the website. Each line also covers its -sm copy.
+User-agent: Googlebot-Image
+Disallow: /assets/img/web/east-rock
+Disallow: /assets/img/web/guitar
+Disallow: /assets/img/web/iisc-main
+Disallow: /assets/img/web/iisc-tata
+Disallow: /assets/img/web/iiser-badminton
+Disallow: /assets/img/web/iiser-birthday
+Disallow: /assets/img/web/iiser-campus
+Disallow: /assets/img/web/iiser-durga-puja
+Disallow: /assets/img/web/iiser-farewell
+Disallow: /assets/img/web/iiser-gate
+Disallow: /assets/img/web/iiser-gr-night
+Disallow: /assets/img/web/iiser-hostel
+Disallow: /assets/img/web/iucaa-aryabhata
+Disallow: /assets/img/web/iucaa-foucault
+Disallow: /assets/img/web/iucaa-galileo
+Disallow: /assets/img/web/iucaa-garden
+Disallow: /assets/img/web/iucaa-main
+Disallow: /assets/img/web/iucaa-trek1
+Disallow: /assets/img/web/iucaa-trek3
+Disallow: /assets/img/web/sikkim-guru
+Disallow: /assets/img/web/sikkim-lake
+Disallow: /assets/img/web/sikkim-monastery
+Disallow: /assets/img/web/sikkim-pelling1
+Disallow: /assets/img/web/sikkim-pelling2
+Disallow: /assets/img/web/tamil-andal
+Disallow: /assets/img/web/tamil-andal2
+
+User-agent: *
+Allow: /
+
+Sitemap: https://surendra-bhattarai.github.io/sitemap.xml
