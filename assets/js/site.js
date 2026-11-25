@@ -13,8 +13,8 @@
     });
   }
   function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
-  // Optimized photos in assets/img/web/ have a smaller "-sm" copy for grids.
-  function small(src) { return /assets\/img\/web\/[^/]+\.jpg$/.test(src) && !/-sm\.jpg$/.test(src) ? src.replace(/\.jpg$/, '-sm.jpg') : src; }
+  // Optimized photos in assets/img/web/ and assets/img/life/ have a smaller "-sm" copy for grids.
+  function small(src) { return /assets\/img\/(web|life)\/[^/]+\.jpg$/.test(src) && !/-sm\.jpg$/.test(src) ? src.replace(/\.jpg$/, '-sm.jpg') : src; }
 
   /* ---------------- theme ---------------- */
   function currentTheme() {
