@@ -329,6 +329,17 @@ button { font: inherit; color: inherit; }
 .research-card.wd h3 { color: var(--blue); }
 .research-card.rg h3 { color: var(--giant); }
 .research-card p { color: var(--muted); }
+.research-card.nm:hover { border-color: var(--amber); }
+.research-card.nm h3 { color: var(--amber); }
+.research-card.wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); gap: 0 32px; }
+.research-card.wide .rc-visual { height: auto; min-height: 220px; margin: -28px 0 -28px -28px; }
+.research-card.wide .rc-visual svg { width: 86%; height: auto; max-height: 260px; }
+.research-card .rc-link { margin-top: 18px; }
+@media (max-width: 860px) {
+  .research-card.wide { grid-template-columns: 1fr; }
+  .research-card.wide .rc-visual { height: 150px; min-height: 0; margin: -28px -28px 22px; }
+  .research-card.wide .rc-visual svg { width: auto; height: 100%; }
+}
 .previously { margin-top: 48px; }
 .prev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .prev-item { display: flex; gap: 14px; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
