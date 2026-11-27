@@ -1,4 +1,4 @@
 # Switch for the scaling_correction page (https://surendra-bhattarai.github.io/scaling_correction/).
-# To HIDE the page: delete the "# " at the start of the last line and commit.
+# To HIDE the page (and its button on the homepage): delete the "# " at the start of the last line and commit.
 # To SHOW it again: put the "# " back and commit. The site updates about a minute later.
-# exclude: [scaling_correction]
+exclude: [scaling_correction]
