@@ -93,6 +93,19 @@ td.num { font-family: var(--mono); white-space: nowrap; }
 .warn:empty { display: none; }
 .table-scroll { overflow-x: auto; }
 
+/* how it works */
+.flow { width: 100%; min-width: 640px; height: auto; display: block; }
+.flow text { font-family: var(--sans); }
+.flow .t1 { font-size: 15px; font-weight: 600; fill: var(--text); }
+.flow .t2 { font-size: 13px; fill: var(--muted); }
+.flow .hd { font-size: 13px; font-weight: 600; fill: var(--head); letter-spacing: .02em; }
+.flow .bx { fill: var(--bg-soft); stroke: var(--rule-strong); stroke-width: 1; }
+.flow .st { fill: var(--note-bg); stroke: var(--yale-2); stroke-width: 1.5; }
+.flow .out { fill: var(--note-bg); stroke: var(--head); stroke-width: 1.5; }
+.flow .ar { stroke: var(--muted); stroke-width: 1.2; fill: none; }
+.flow .ar-st { stroke: var(--yale-2); stroke-width: 1.5; fill: none; }
+.flow-wrap { overflow-x: auto; margin: 10px 0 6px; }
+table.example td:first-child { white-space: nowrap; }
 /* code and formula */
 pre { background: var(--code-bg); border: 1px solid var(--rule); padding: 12px 16px; overflow-x: auto; font: 0.9rem/1.55 var(--mono); margin: 8px 0 14px; }
 code { font-family: var(--mono); font-size: 0.92em; background: var(--code-bg); padding: 1px 4px; }
@@ -141,6 +154,7 @@ footer { border-top: 1px solid var(--rule); margin-top: 50px; padding-top: 14px;
       <h2>On this page</h2>
       <a href="#overview">Overview</a>
       <a href="#calculator">Calculator</a>
+      <a href="#how">How the calculator works</a>
       <a href="#install">Install</a>
       <a href="#python">Use in Python</a>
       <a href="#mesa">Use in MESA</a>
@@ -155,7 +169,7 @@ footer { border-top: 1px solid var(--rule); margin-top: 50px; padding-top: 14px;
     <div class="crumbs"><a href="https://surendra-bhattarai.github.io/">Home</a> › <a href="https://surendra-bhattarai.github.io/#research">Research</a> › scaling_correction</div>
     <h1 id="overview">ν<sub>max</sub> and Δν for stellar models</h1>
     <p class="lead">scaling_correction corrects the ν<sub>max</sub> and Δν that the scaling relations give for a stellar model. The ν<sub>max</sub> correction makes a model's ν<sub>max</sub> agree with the ν<sub>max</sub>–Δν relation observed by <i>Kepler</i>, and the Δν correction replaces the scaling Δν by the Δν of the model's radial modes. Both are linear formulas in log g, T<sub>eff</sub>, [Fe/H] and mass, so they can be used in grid-based modeling without computing oscillation frequencies.</p>
-    <div class="note"><p>Preview. The code is released with Bhattarai &amp; Basu (in preparation), and the coefficients may change before publication.</p></div>
+    <!-- <div class="note"><p>Preview. The code is released with Bhattarai &amp; Basu (in preparation), and the coefficients may change before publication.</p></div> -->
 
     <h2 id="calculator">Calculator</h2>
     <div class="calc">
@@ -185,6 +199,26 @@ footer { border-top: 1px solid var(--rule); margin-top: 50px; padding-top: 14px;
       <div class="warn" id="warn"></div>
     </div>
     <p class="meta">log g is computed from M and R with log g<sub>⊙</sub> = 4.438. The scaling relations use ν<sub>max,⊙</sub> = 3090 μHz, Δν<sub>⊙</sub> = 135.1 μHz and T<sub>eff,⊙</sub> = 5772 K. The ± is the statistical error of the formula; single models scatter about it by more (see the formulas below).</p>
+
+    <h2 id="how">How the calculator works</h2>
+    <p>The page stores no models and no data, only the fitted numbers (about 5 kB): for f and f<sub>Δν</sub> and for each group, the five coefficients a–e, their covariance, the scatter of the models about the formula, and the range of the grid. They come from a least-squares fit to 28,767 MESA + GYRE models, and the Python package and the Fortran module use the same numbers. Everything is computed in your browser; nothing is sent anywhere.</p>
+    <div class="flow-wrap"><svg class="flow" viewBox="0 0 960 488" role="img" aria-labelledby="flow-title flow-desc"><title id="flow-title">How the calculator works</title><desc id="flow-desc">Built once: the MESA and GYRE model grid gives f and f-delta-nu for each model, a least-squares fit per group gives coefficients, and these are stored in the page. In the browser: the inputs give log g and the scaling values, the star is assigned to a group, the stored coefficients give f and f-delta-nu, and the corrected numax and delta-nu are shown.</desc><defs><marker id="fl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><text class="hd" x="205" y="26" text-anchor="middle">BUILT ONCE, FROM THE MODELS</text><text class="hd" x="760" y="26" text-anchor="middle">IN YOUR BROWSER, AT EVERY KEYSTROKE</text><rect class="bx" x="40" y="50" width="330" height="58" rx="4"/><text class="t1" x="205" y="72" text-anchor="middle" dominant-baseline="central">MESA + GYRE model grid</text><text class="t2" x="205" y="91" text-anchor="middle" dominant-baseline="central">28,767 models, main sequence to RGB</text><rect class="bx" x="40" y="140" width="330" height="58" rx="4"/><text class="t1" x="205" y="162" text-anchor="middle" dominant-baseline="central">Corrections for each model</text><text class="t2" x="205" y="181" text-anchor="middle" dominant-baseline="central">f and fΔν from its radial modes</text><rect class="bx" x="40" y="230" width="330" height="58" rx="4"/><text class="t1" x="205" y="252" text-anchor="middle" dominant-baseline="central">Least-squares fit per group</text><text class="t2" x="205" y="271" text-anchor="middle" dominant-baseline="central">MS+SG and RGB separately</text><rect class="st" x="40" y="320" width="330" height="58" rx="4"/><text class="t1" x="205" y="342" text-anchor="middle" dominant-baseline="central">Stored in this page (about 5 kB)</text><text class="t2" x="205" y="361" text-anchor="middle" dominant-baseline="central">coefficients a–e, covariance, ranges</text><line class="ar" x1="205.0" y1="108" x2="205.0" y2="138" marker-end="url(#fl-arrow)"/><line class="ar" x1="205.0" y1="198" x2="205.0" y2="228" marker-end="url(#fl-arrow)"/><line class="ar" x1="205.0" y1="288" x2="205.0" y2="318" marker-end="url(#fl-arrow)"/><rect class="bx" x="590" y="50" width="340" height="58" rx="4"/><text class="t1" x="760" y="72" text-anchor="middle" dominant-baseline="central">Your inputs</text><text class="t2" x="760" y="91" text-anchor="middle" dominant-baseline="central">M, R, T<tspan baseline-shift="sub" font-size="10">eff</tspan>, initial [Fe/H]</text><rect class="bx" x="590" y="140" width="340" height="58" rx="4"/><text class="t1" x="760" y="162" text-anchor="middle" dominant-baseline="central">Scaling relations</text><text class="t2" x="760" y="181" text-anchor="middle" dominant-baseline="central">log g, ν<tspan baseline-shift="sub" font-size="10">max,sc</tspan> and Δν<tspan baseline-shift="sub" font-size="10">sc</tspan></text><rect class="bx" x="590" y="230" width="340" height="58" rx="4"/><text class="t1" x="760" y="252" text-anchor="middle" dominant-baseline="central">Choose the group</text><text class="t2" x="760" y="271" text-anchor="middle" dominant-baseline="central">MS+SG, RGB, or none (clump, gap)</text><rect class="bx" x="590" y="320" width="340" height="58" rx="4"/><text class="t1" x="760" y="342" text-anchor="middle" dominant-baseline="central">Apply the formulas</text><text class="t2" x="760" y="361" text-anchor="middle" dominant-baseline="central">f, fΔν = a + b log g + … + e log M</text><rect class="out" x="590" y="410" width="340" height="58" rx="4"/><text class="t1" x="760" y="432" text-anchor="middle" dominant-baseline="central">Corrected ν<tspan baseline-shift="sub" font-size="11">max</tspan> and Δν</text><text class="t2" x="760" y="451" text-anchor="middle" dominant-baseline="central">factor × scaling value, with ±</text><line class="ar" x1="760.0" y1="108" x2="760.0" y2="138" marker-end="url(#fl-arrow)"/><line class="ar" x1="760.0" y1="198" x2="760.0" y2="228" marker-end="url(#fl-arrow)"/><line class="ar" x1="760.0" y1="288" x2="760.0" y2="318" marker-end="url(#fl-arrow)"/><line class="ar" x1="760.0" y1="378" x2="760.0" y2="408" marker-end="url(#fl-arrow)"/><line class="ar-st" x1="370" y1="349" x2="586" y2="349" marker-end="url(#fl-arrow)"/></svg></div>
+    <p>The ± is the statistical error of the formula, from the covariance of the coefficients. Single models scatter about the formula by more, 0.9% (MS+SG) and 0.7% (RGB) for f and 0.7% and 0.3% for f<sub>Δν</sub>. A warning appears when an input lies outside the range of the grid.</p>
+    <h3>Worked example: the default red giant</h3>
+    <p>M = 1.2 M<sub>⊙</sub>, R = 9 R<sub>⊙</sub>, T<sub>eff</sub> = 4700 K, [Fe/H] = 0.</p>
+    <div class="table-scroll"><table class="example">
+      <thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>log g</td><td class="num">4.438 + log 1.2 − 2 log 9</td><td class="num">2.609 (RGB)</td></tr>
+        <tr><td>ν<sub>max,sc</sub></td><td class="num">3090 × 1.2/81 × (4700/5772)<sup>−1/2</sup></td><td class="num">50.73 μHz</td></tr>
+        <tr><td>f</td><td class="num">−2.98181 − 0.01955 + 4.07134 − 0 − 0.05395</td><td class="num">1.01603 ± 0.00047</td></tr>
+        <tr><td>Corrected ν<sub>max</sub></td><td class="num">1.01603 × 50.730</td><td class="num">51.54 μHz</td></tr>
+        <tr><td>Δν<sub>sc</sub></td><td class="num">135.1 × (1.2/9<sup>3</sup>)<sup>1/2</sup></td><td class="num">5.481 μHz</td></tr>
+        <tr><td>f<sub>Δν</sub></td><td class="num">same form, its own RGB coefficients</td><td class="num">0.9660 ± 0.0001</td></tr>
+        <tr><td>Corrected Δν</td><td class="num">0.9660 × 5.481</td><td class="num">5.295 μHz</td></tr>
+      </tbody>
+    </table></div>
+    <p class="meta">The five terms of f are a, b log g, c log T<sub>eff</sub>, d [Fe/H] (zero here) and e log M, with the RGB coefficients from the table of formulas below.</p>
 
     <h2 id="install">Install</h2>
     <pre><code>pip install git+https://github.com/Surendra-Bhattarai/scaling_correction</code></pre>
